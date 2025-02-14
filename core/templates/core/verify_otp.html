@@ -1,0 +1,22 @@
+<form method="post">
+    {% csrf_token %}
+    <label>Email:</label>
+    <input type="email" name="email" required>
+    
+    <label>Enter OTP:</label>
+    <input type="text" name="otp_code" required>
+
+    <button type="submit">Verify OTP</button>
+</form>
+
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h2>Verify OTP</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Verify</button>
+</form>
+{% endblock %}
+

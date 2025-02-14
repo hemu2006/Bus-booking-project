@@ -1,0 +1,19 @@
+ <!-- core/templates/core/home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to the Bus Booking System!</h1>
+    <p>Browse available journeys!</p>
+</body>
+</html>
+
+<!-- templates/core/home.html -->
+{% extends 'base_generic.html' %}
+
+{% block content %}
+  <h1>Welcome to Bus Booking System</h1>
+  <p><a href="{% url 'view_journeys' %}">View Your Journeys</a></p>
+{% endblock %}

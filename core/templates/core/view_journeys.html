@@ -1,0 +1,13 @@
+ <!-- templates/journeys/view_journeys.html -->
+<h1>Your Journeys</h1>
+
+{% if journeys %}
+    <ul>
+    {% for journey in journeys %}
+        <li>{{ journey.destination }} - {{ journey.date }}</li> <!-- Customize based on your model fields -->
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>You have no journeys.</p>
+{% endif %}
+

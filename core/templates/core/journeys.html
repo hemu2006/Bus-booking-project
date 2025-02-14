@@ -1,0 +1,20 @@
+<h1>Your Journeys</h1>
+
+<h2>Upcoming Journeys</h2>
+<ul>
+  {% for ticket in upcoming_journeys %}
+    <li>{{ ticket.journey.departure_city }} to {{ ticket.journey.destination_city }} - Departure: {{ ticket.journey.departure_time }}</li>
+  {% empty %}
+    <li>No upcoming journeys.</li>
+  {% endfor %}
+</ul>
+
+<h2>Past Journeys</h2>
+<ul>
+  {% for ticket in past_journeys %}
+    <li>{{ ticket.journey.departure_city }} to {{ ticket.journey.destination_city }} - Departure: {{ ticket.journey.departure_time }}</li>
+  {% empty %}
+    <li>No past journeys.</li>
+  {% endfor %}
+</ul>
+

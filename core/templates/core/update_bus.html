@@ -1,0 +1,14 @@
+<!-- core/templates/core/update_bus.html -->
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h2>Update Bus: {{ bus.bus_number }}</h2>
+  
+  <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Update Bus</button>
+  </form>
+  
+{% endblock %}
+

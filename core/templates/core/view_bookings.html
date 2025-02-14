@@ -1,0 +1,31 @@
+
+<!-- core/templates/core/view_bookings.html -->
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h2>Bookings for Bus {{ bus.bus_number }}</h2>
+  <p><strong>Route:</strong> {{ bus.route_from }} to {{ bus.route_to }}</p>
+  <p><strong>Departure:</strong> {{ bus.departure_time }}</p>
+  
+  <h3>Bookings</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Passenger</th>
+        <th>Number of Seats</th>
+        <th>Total Amount</th>
+        <th>Booking Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for booking in bookings %}
+        <tr>
+          <td>{{ booking.user.username }}</td>
+          <td>{{ booking.number_of_seats }}</td>
+          <td>{{ booking.total_amount }}</td>
+          <td>{{ booking.booking_time }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

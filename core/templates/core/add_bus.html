@@ -1,0 +1,13 @@
+<!-- core/templates/core/add_bus.html -->
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h2>Add New Bus</h2>
+  
+  <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Add Bus</button>
+  </form>
+{% endblock %}
+

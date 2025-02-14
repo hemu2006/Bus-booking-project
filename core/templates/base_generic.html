@@ -1,0 +1,19 @@
+
+<!-- core/templates/base_generic.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bus Booking System</title>
+</head>
+<body>
+    {% if messages %}
+      <ul>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

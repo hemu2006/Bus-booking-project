@@ -1,0 +1,12 @@
+<!-- core/templates/core/passenger_login.html -->
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h2>Passenger Login</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+</form>
+{% endblock %}
+
